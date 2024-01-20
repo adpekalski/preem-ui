@@ -1,5 +1,8 @@
 {
-  "name": "preem-ui",
+  "name": "@adpekalski/preem-ui",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/adpekalski"
+  },
   "version": "0.0.1",
   "description": "React animated components library",
   "main": "dist/cjs/index.js",
