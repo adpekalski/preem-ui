@@ -7,11 +7,11 @@ import typescript from "@rollup/plugin-typescript";
 import terser from "@rollup/plugin-terser";
 import dts from "rollup-plugin-dts";
 
-// import { createRequire } from 'node:module';
-// const requireFile = createRequire(import.meta.url);
-// const packageJson = requireFile('./package.json');
+import { createRequire } from 'node:module';
+const requireFile = createRequire(import.meta.url);
+const packageJson = requireFile('./package.json');
 
-import packageJson from "./package.json" assert { type: "json" };
+// import packageJson from "./package.json" assert { type: "json" };
 
 export default [
     {
@@ -20,12 +20,12 @@ export default [
             {
                 file: packageJson.main,
                 format: "cjs",
-                sourcemap: true,
+                // sourcemap: true,
             },
             {
                 file: packageJson.module,
                 format: "esm",
-                sourcemap: true,
+                // sourcemap: true,
             },
         ],
         plugins: [

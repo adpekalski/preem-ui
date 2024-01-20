@@ -3,7 +3,7 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/adpekalski"
   },
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "React animated components library",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -13,7 +13,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "clean": "rimraf dist",
-    "rollup": "rollup -c"
+    "rollup": "npm run clean && rollup -c"
   },
   "author": "WebWeaverDev",
   "license": "MIT",
