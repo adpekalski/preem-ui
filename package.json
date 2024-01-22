@@ -3,35 +3,53 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/adpekalski"
   },
-  "version": "0.0.3",
+  "version": "0.0.11",
   "description": "React animated components library",
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
+  "type": "module",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
-  "types": "dist/index.d.ts",
   "scripts": {
+    "lint": "eslint . --ext .ts,.tsx --ignore-path .gitignore --fix",
     "clean": "rimraf dist",
-    "rollup": "npm run clean && rollup -c"
+    "vite": "npm run clean && tsc && vite build",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "author": "WebWeaverDev",
   "license": "MIT",
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^25.0.7",
-    "@rollup/plugin-node-resolve": "^15.2.3",
-    "@rollup/plugin-terser": "^0.4.4",
-    "@rollup/plugin-typescript": "^11.1.6",
+    "@storybook/addon-essentials": "^7.6.10",
+    "@storybook/addon-interactions": "^7.6.10",
+    "@storybook/addon-links": "^7.6.10",
+    "@storybook/addon-onboarding": "^1.0.10",
+    "@storybook/blocks": "^7.6.10",
+    "@storybook/react": "^7.6.10",
+    "@storybook/react-vite": "^7.6.10",
+    "@storybook/test": "^7.6.10",
     "@types/react": "^18.2.48",
+    "@typescript-eslint/eslint-plugin": "^6.19.0",
+    "@typescript-eslint/parser": "^6.19.0",
+    "eslint": "^8.56.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-storybook": "^0.6.15",
     "react": "^18.2.0",
-    "rollup": "^4.9.5",
-    "rollup-plugin-dts": "^6.1.0",
+    "react-dom": "^18.2.0",
+    "storybook": "^7.6.10",
+    "styled-components": "^6.1.8",
     "tslib": "^2.6.2",
     "typescript": "^5.3.3",
-    "rollup-plugin-peer-deps-external": "^2.2.4"
+    "vite": "^5.0.12",
+    "vite-plugin-dts": "^3.7.1"
   },
   "peerDependencies": {
     "react": "^18.2.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "framer-motion": "^10.18.0"
+  }
 }
