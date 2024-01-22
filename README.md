@@ -4,7 +4,7 @@
 ### STACK
 `React`  
 `Typescript`  
-`Rollup`  
+`Vite`  
 `Storybook`  
-`Panda CSS`
+`Styled components` - uncertain
 
